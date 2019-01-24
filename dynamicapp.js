@@ -1,11 +1,4 @@
 const colors = ['blue', 'green', 'yellow', 'orange']
-const squareCSS = `{
-  width: 50px;
-  height: 50px;
-  border: solid 1px black;
-  float: left;
-  margin: 0 10px 0 0;
-}`
 
 function generateDom(colors) {
   const titleElement = document.createElement('h1')
