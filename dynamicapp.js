@@ -1,4 +1,4 @@
-const colors = ['blue', 'green', 'yellow', 'orange']
+const colors = ['blue', 'green', 'yellow', 'orange', 'pink', 'purple']
 
 function generateDom(colors) {
   const titleElement = document.createElement('h1')
@@ -16,7 +16,7 @@ function generateDom(colors) {
   buttonDiv = document.getElementById('button-div')
   const hideButton = document.createElement('button')
   hideButton.id = 'hide'
-  hideButton.innerText = 'Hide All the Buttons'
+  hideButton.innerText = 'Hide All the Squares'
   hideButton.onclick = () => {
     const squareList = document.querySelectorAll('.square')
     squareList.forEach(square => {
@@ -26,7 +26,7 @@ function generateDom(colors) {
   buttonDiv.appendChild(hideButton)
   const showButton = document.createElement('button')
   showButton.id = 'show'
-  showButton.innerText = 'Show All the Buttons'
+  showButton.innerText = 'Show All the Squares'
   showButton.onclick = () => {
     const squareList = document.querySelectorAll('.square')
     squareList.forEach(square => {
