@@ -4,7 +4,6 @@ function generateDom(colors) {
   const titleElement = document.createElement('h1')
   const titleText = document.createTextNode('My App')
   titleElement.appendChild(titleText)
-  // document.getElementsByTagName('body')[0].appendChild(titleElement)
   document.body.appendChild(titleElement)
   createSquares()
   createButtons()
