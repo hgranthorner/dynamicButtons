@@ -13,23 +13,7 @@ function generateDom(colors) {
   buttonDiv.classList.add('button-container')
   buttonDiv.id = 'button-div'
   document.body.appendChild(buttonDiv)
-  createButtons(colors)
-}
-
-function createSquares(colors) {
-  const squareDiv = document.querySelector('.square-container')
-  let colorSquare
-  colors.forEach(color => {
-    colorSquare = document.createElement('div')
-    colorSquare.classList.add('square')
-    colorSquare.id = color
-    colorSquare.style.backgroundColor = color
-    squareDiv.appendChild(colorSquare)
-  })
-}
-
-function createButtons(colors) {
-  const buttonDiv = document.getElementById('button-div')
+  buttonDiv = document.getElementById('button-div')
   const hideButton = document.createElement('button')
   hideButton.id = 'hide'
   hideButton.innerText = 'Hide All the Buttons'
@@ -50,6 +34,24 @@ function createButtons(colors) {
     })
   }
   buttonDiv.appendChild(showButton)
+
+  createButtons(colors)
+}
+
+function createSquares(colors) {
+  const squareDiv = document.querySelector('.square-container')
+  let colorSquare
+  colors.forEach(color => {
+    colorSquare = document.createElement('div')
+    colorSquare.classList.add('square')
+    colorSquare.id = color
+    colorSquare.style.backgroundColor = color
+    squareDiv.appendChild(colorSquare)
+  })
+}
+
+function createButtons(colors) {
+  const buttonDiv = document.getElementById('button-div')
   colors.forEach(color => {
     let button = document.createElement('button')
     button.id = color + '-toggle'
